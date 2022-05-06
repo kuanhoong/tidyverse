@@ -15,7 +15,6 @@ In this live code-along session, you'll learn the basic principles of analyzing 
 
 In this session, we will use Kaggle Notebook and Tidyverse to explore the [`NYC Flights 2013`](https://cran.r-project.org/web/packages/nycflights13/) dataset, which consists of observations of all flights that departed NYC in 2013. The data frame contains all 336,776 flights and the data comes from the US Bureau of Transportation Statistics, and is documented in `?flights`.
 
-
 ## dplyr package
 There are five key `dplyr` functions that allow you to solve the vast majority of your data manipulation challenges:
 
