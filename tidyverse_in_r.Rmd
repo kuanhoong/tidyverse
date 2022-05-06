@@ -384,6 +384,7 @@ In this tutorial, you have gone from zero to one with the basics of data analysi
 - [Getting Started with the Tidyverse: Tutorial](https://www.datacamp.com/tutorial/tidyverse-tutorial-r)
 - [Manipulating, analyzing and exporting data with tidyverse](https://datacarpentry.org/R-ecology-lesson/03-dplyr.html)
 - [Intoduction to Tidyverse](https://www.pkimes.com/PR2019replicathon/tutorials/0b_R_tidyverse.html)
+- [Data transformation with dplyr cheatsheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
 
 ## About Me
 
