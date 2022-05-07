@@ -373,6 +373,56 @@ Plot scatterplot where `x=gdpPercap`, `y=lifeExp` and `colour=continent` for yea
 #your code here
 ```
 
+# Tidy Data
+
+There’s a popular saying in Data Science that goes like this — *“Data Scientists spend up to 80% of the time on data cleaning and 20 percent of their time on actual data analysis”.* 
+
+## The 3 rules of Tidy Data
+1. Each variable is a column
+2. Each observation is a row
+3. Each type of observational unit is a table
+
+## 5 symptoms of messy data
+1. Column headers are values, not variable names.
+2. Multiple variables are stored in one column.
+3. Variables are stored in both rows and columns.
+4. Multiple types of observational units are stored in the same table.
+5. A single observational unit is stored in multiple tables.
+
+`tidyr` — set of functions to help you get tidy data. It’s the successor to reshape2(which uses melt and cast). It has 5 main categories
+
+- Pivoting → `pivot_longer()`& `pivot_wider()`
+- Rectangling → `unnest_longer()`, `unnest_wider()`, `hoist()`
+- Nesting → `nest()` & `unnest()`
+- Splitting and combining columns →`separate()`,`extract()`, `unite()`
+- Missing Values→ `complete()`, `drop_na()`, `fill()`, `replace_na()`
+
+```{r}
+dem_score <- read_csv("https://raw.githubusercontent.com/kuanhoong/tidyverse/main/data/dem_score.csv")
+dem_score
+```
+
+Convert a data frame that isn’t in “tidy” format (“wide” format) to a data frame that is in “tidy” format (“long/narrow” format).
+
+To go from wide to long with tidyr, use the `pivot_longer()` function. It has the following syntax:
+
+
+    pivot_longer(mydata, 
+      cols, # columns that should pivot from wide to long (unquoted)
+      names_to, # name of the new category column as a quoted string
+      values_to # name of the new value column as a quoted string
+    )
+
+```{r}
+# convert to tidy format ("wide" format)
+dem_tidy <- dem_score %>% 
+  pivot_longer(names_to = "year", 
+               values_to = "democracy_score", 
+               cols = -country,
+               names_transform = list(year = as.integer)) 
+dem_tidy
+```
+
 ## Conclusion
 
 In this tutorial, you have gone from zero to one with the basics of data analysis using the tidyverse and tidy tools. You've learnt how to `select()`, `filter()` your data, `arrange()` and `mutate()` it, plot and `summarise()` it using `dplyr` and `ggplot2`, all by writing code that mirrors the way you think and talk about data.
