@@ -462,6 +462,17 @@ rent_income_wide <- pivot_wider(us_rent_income,
 )
 rent_income_wide
 ```
+# Exercise 11
+
+The `billboard` dataset records the billboard rank of songs in the year 2000. Use `pivot_longer` to tidy the data.
+
+```{r}
+billboard
+```
+
+```{r}
+#your code here
+```
 
 ## Conclusion
 
