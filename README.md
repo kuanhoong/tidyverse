@@ -20,6 +20,21 @@ There are five key dplyr functions that allow you to solve the vast majority of 
 
 These can all be used in conjunction with group_by() which changes the scope of each function from operating on the entire dataset to operating on it group-by-group. These six functions provide the verbs for a language of data manipulation.
 
+
+# Tidy Data
+
+There’s a popular saying in Data Science that goes like this — *“Data Scientists spend up to 80% of the time on data cleaning and 20 percent of their time on actual data analysis.*
+
+## tidyr package
+
+`tidyr` — set of functions to help you get tidy data. It’s the successor to reshape2(which uses melt and cast). It has 5 main categories
+
+- Pivoting → `pivot_longer()` & `pivot_wider()`
+- Rectangling → `unnest_longer()`, `unnest_wider()`, `hoist()`
+- Nesting → `nest()` & `unnest()`
+- Splitting and combining columns → `separate()`,`extract()`, `unite()`
+- Missing Values → `complete()`, `drop_na()`, `fill()`, `replace_na()`
+
 ## Clone the repository
 
 To get set up for this live coding session, clone this repository. You can do so by executing the following in your terminal:
