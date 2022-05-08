@@ -474,6 +474,18 @@ billboard
 #your code here
 ```
 
+# Exercise 12
+
+The `fish_encounters` dataset describes when fish swimming down a river are detected by automatic monitoring stations. Use `pivot_wider` to tidy the data.
+
+```{r}
+fish_encounters
+```
+
+```{r}
+#your code here
+```
+
 ## Conclusion
 
 In this tutorial, you have gone from zero to one with the basics of data analysis using the tidyverse and tidy tools. You've learnt how to `select()`, `filter()` your data, `arrange()` and `mutate()` it, plot and `summarise()` it using `dplyr` and `ggplot2`, all by writing code that mirrors the way you think and talk about data.
