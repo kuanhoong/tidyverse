@@ -1,11 +1,9 @@
 ---
 title: "Introduction to Tidyverse"
-output:
-  html_document:
-    df_print: paged
+
 ---
 
-# Introduction to Tidyverse
+# Introduction
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibsBr4jgszzxobJ3Rfis_C9k1pNuuWj7p9zjDB4ByWOJw3QG4sjSrSSG7Sc8jGiIr8fZouhj55lGGDoopFsFUWHrvzek4epPoJtFyFcYREWaQYtQFNJ0KYzcai8rpnPAi5cjnIsen0dWEB7I2bxuVQgPtr_A_fgdKb11xfs-R-Oq55YdrehZMsCQQK/s400/tidyverse.png)
 
@@ -86,7 +84,6 @@ flights %>%
 
 ```{r}
 ## filter origin == JFK and dest == "LAX"
-
 flights %>%
   filter (origin == "JFK" & dest == "LAX")
 ```
@@ -106,14 +103,12 @@ Use `arrange()` to sort your observations
 
 ```{r}
 ## arrange by air_time
-
 flights %>%
   arrange(air_time)
 ```
 
 ```{r}
 ## arrange by air_time in decreasing manner
-
 flights %>%
   arrange(desc(air_time))
 ```
@@ -190,7 +185,6 @@ Use the `summarise()` verb to group and summarise data.
 
 ```{r}
 # Check out mean air_time
-
 flights %>%
   summarise(mean_air_time = mean (air_time, na.rm=TRUE), n=n())
 ```
@@ -210,7 +204,6 @@ Use the `group_by()` and `summarise()` verbs to find the mean `air_time` and `ta
 
 ```{r}
 #summarise() and group_by()
-
 flights %>%
   filter (origin == "JFK" & dest == "LAX") %>%
   group_by (tailnum) %>%
@@ -218,7 +211,6 @@ flights %>%
 ```
 ```{r}
 #use group_by() and ungroup() without summarise()
-
 flights %>%
   drop_na() %>%
   group_by(dest, origin) %>%
@@ -258,8 +250,8 @@ Create a new variable called`long_flight` where air_time is greater or equal 360
 
 ```{r}
 flights %>%
-  mutate(long_flight = (air_time >= 6 * 60)) %>%
-  View()
+  mutate(long_flight = (air_time >= 6 * 60))
+  
 ```
 
 Now need to count the number of long flights
@@ -313,7 +305,6 @@ ggplot(flights %>%
 
 ```{r}
 ## bar plot
-
 ggplot(data=flights, mapping = aes(x = carrier)) +
   geom_bar()
 ```
