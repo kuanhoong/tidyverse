@@ -477,6 +477,78 @@ fish_encounters
 #your code here
 ```
 
+## Extra Exercises
+
+In this exercise, you’ll work with a dataset from “The Great British Bake-Off.” The file “bakeoff.csv” contains data for each episode of the show, organized by series and baker.
+
+```{r}
+file="https://raw.githubusercontent.com/kuanhoong/tidyverse/main/data/bakeoff.csv"
+# Create bakeoff from "bakeoff.csv"
+bakeoff <- read_csv(file)
+bakeoff %>%
+head()
+```
+
+## Q0
+
+Display the summary and structure of `bakeoff` data
+
+```{r}
+## display the summary bakeoff data
+
+```
+
+```{r}
+## display the structure bakeoff data
+
+```
+
+## Q1
+
+Use `count` to count the number of rows by series and episode
+
+```{r}
+## Count the number of rows by series and episode
+```
+
+## Q2
+
+Count the number of winning entry in `2011` UK shows with the word `Chocolate` or `Cupcake` in `signature`
+
+*Hint: use `grepl` to filter text
+
+```{r}
+## Count the number of winning entry in 2011 UK shows with the word Chocolate or Cupcake in signature
+
+```
+
+## Q3
+
+Display the names for all the winner
+
+```{r}
+## Display the names for all the winner
+
+```
+
+## Q4
+
+What’s the most common baker name.
+
+```{r}
+## Common baker name
+
+```
+
+## Q5
+
+Make a bar chart using `geom_bar` to plot the number of bakers from `bakeoff` per `episode` along the x-axis. Use `facet_wrap` by `series`.
+
+```{r}
+## bar chart
+
+```
+
 ## Conclusion
 
 In this tutorial, you have gone from zero to one with the basics of data analysis using the tidyverse and tidy tools. You've learnt how to `select()`, `filter()` your data, `arrange()` and `mutate()` it, plot and `summarise()` it using `dplyr` and `ggplot2`, all by writing code that mirrors the way you think and talk about data.
